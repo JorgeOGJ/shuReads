@@ -8,22 +8,22 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel="stylesheet" href="css/basic.css">
-
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/steve-jobs.css">
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/steve-jobs.js"></script>
+    <script src="js/all.js"></script>
     <script src="js/epub.min.js"></script>
     <script src="js/zip.min.js"></script>
-
+    <script src="js/hash.js"></script>
+    <script src="js/turn.min.js"></script>
+    <script src="js/zoom.min.js"></script>
+    <script src="js/bookshelf.js"></script>
     <script>
 
-        EPUBJS.filePath = "../demo/js/libs/";
-        EPUBJS.cssPath = "../demo/css/";
-
-    </script>
-
-    <script>
-        "use strict";
-
-        var Book = ePub("../demo/moby-dick.epub");
-
+        EPUBJS.filePath = "js/";
+        EPUBJS.cssPath = "css/";
+       var Book = ePub("demo/demo.epub");
     </script>
 </head>
 <body>
@@ -32,7 +32,25 @@
     <div id="area"></div>
     <div id="next" onclick="Book.nextPage();" class="arrow">›</div>
 </div>
-
+<div class="bookshelf">
+    <div class="shelf">
+        <div class="row-1">
+            <div class="loc">
+                <div> <div class="sample thumb1" sample="steve-jobs"></div> </div>
+                <div> <div class="sample thumb2" sample="html5"></div> </div>
+                <div> <div class="sample thumb3" sample="docs"></div> </div>
+            </div>
+        </div>
+        <div class="row-2">
+            <div class="loc">
+                <div> <div class="sample thumb4" sample="magazine1"></div> </div>
+                <div> <div class="sample thumb5" sample="magazine2"></div> </div>
+                <div> <div class="sample thumb6" sample="magazine3"></div> </div>
+            </div>
+        </div>
+    </div>
+    <div class="suggestion">&uarr; Click a book or magazine to see turn.js in action</div>
+</div>
 <script>
 
     Book.renderTo("area");
